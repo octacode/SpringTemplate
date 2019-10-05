@@ -25,25 +25,3 @@ class Demo {
 		}
 		return -1;
 	}
-
-	public static int binSearchLast(int arr[], int key) {
-		int l = 0;
-		int r = arr.length-1;
-		while (l<=r) {
-			int mid = l + (r-l)/2;
-			if (arr[mid] == key){
-				if (mid == arr.length-1)
-					return mid;
-				else if (arr[mid] == arr[mid+1])
-					l = mid+1;
-				else
-					return mid;
-			}
-			else if (arr[mid] > key)
-				r = mid-1;
-			else
-				l = mid+1;
-		}
-		return -1;
-	}
-}
